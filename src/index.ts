@@ -9,6 +9,14 @@ const categories = [animals, space, food, mythology];
 export const friendlyWords = (segments = 2, separator = '-'): string => {
   const words: string[] = [];
 
+  if (segments < 2) {
+    throw new Error('Need at least 2 words');
+  }
+
+  if (!separator) {
+    throw new Error('Need a separator');
+  }
+
   const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
   words.push(adjective);
 
