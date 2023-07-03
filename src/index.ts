@@ -4,7 +4,11 @@ import plants from '../lib/plants.json' assert { type: 'json' };
 
 const categories = [animals, space, plants];
 
-export const friendlyWords = (): string => {
+export const friendlyWords = ({
+  separator = '-',
+}: {
+  separator?: string;
+}): string => {
   const category1 = categories[Math.floor(Math.random() * categories.length)];
   const category2 = categories[Math.floor(Math.random() * categories.length)];
 
@@ -14,5 +18,5 @@ export const friendlyWords = (): string => {
   const object1 = category1[idx1];
   const object2 = category2[idx2];
 
-  return `${object1}-${object2}`;
+  return [object1, object2].join(separator);
 };
