@@ -1,13 +1,18 @@
 import animals from '../lib/animals.json' assert { type: 'json' };
+import space from '../lib/space.json' assert { type: 'json' };
+import plants from '../lib/plants.json' assert { type: 'json' };
+
+const categories = [animals, space, plants];
 
 export const friendlyWords = (): string => {
-  const idx1 = Math.floor(Math.random() * animals.length);
-  const idx2 = Math.floor(Math.random() * animals.length);
-  const idx3 = Math.floor(Math.random() * animals.length);
+  const category1 = categories[Math.floor(Math.random() * categories.length)];
+  const category2 = categories[Math.floor(Math.random() * categories.length)];
 
-  const animal1 = animals[idx1];
-  const animal2 = animals[idx2];
-  const animal3 = animals[idx3];
+  const idx1 = Math.floor(Math.random() * category1.length);
+  const idx2 = Math.floor(Math.random() * category2.length);
 
-  return `${animal1}-${animal2}-${animal3}`;
+  const object1 = category1[idx1];
+  const object2 = category2[idx2];
+
+  return `${object1}-${object2}`;
 };
