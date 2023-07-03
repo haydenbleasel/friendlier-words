@@ -4,22 +4,15 @@ import plants from '../lib/plants.json' assert { type: 'json' };
 
 const categories = [animals, space, plants];
 
-export const friendlyWords = ({
-  segments = 2,
-  separator = '-',
-}: {
-  segments?: number;
-  separator?: string;
-}): string => {
+export const friendlyWords = (segments = 2, separator = '-'): string => {
   const words: string[] = [];
 
-  new Array(segments).fill(undefined).forEach(() => {
+  for (let index = 0; index < segments; index += 1) {
     const category = categories[Math.floor(Math.random() * categories.length)];
-    const index = Math.floor(Math.random() * category.length);
-    const word = category[index];
+    const word = Math.floor(Math.random() * category.length);
 
-    words.push(word);
-  });
+    words.push(category[word]);
+  }
 
   return words.join(separator);
 };
