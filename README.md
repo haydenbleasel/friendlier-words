@@ -10,7 +10,7 @@
 ## Installation
 
 ```bash
-yarn add friendlier-words
+pnpm add friendlier-words
 ```
 
 ## Usage

@@ -12,7 +12,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "prepublishOnly": "yarn build",
+    "prepublishOnly": "pnpm build",
     "build": "tsup src",
     "dev": "tsup src --watch",
     "test": "node test/test.js"
