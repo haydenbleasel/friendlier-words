@@ -1,6 +1,6 @@
-# friendly-words
+# friendlier-words
 
-`friendly-words` is a JavaScript package that creates friendly words to use in your app, e.g. in project names. It's based off the library by [Glitch](https://github.com/glitchdotcom/friendly-words), but with some choice improvements:
+`friendlier-words` is a JavaScript package that creates friendly words to use in your app, e.g. in project names. It's based off the library by [Glitch](https://github.com/glitchdotcom/friendly-words), but with some choice improvements:
 
 - Curated the word lists to remove strange word combinations
 - Generated categories of words rather than objects, allowing for more flexibility
@@ -10,13 +10,13 @@
 ## Installation
 
 ```bash
-yarn add @beskar-labs/friendly-words
+yarn add friendlier-words
 ```
 
 ## Usage
 
 ```ts
-import { friendlyWords } from '@beskar-labs/friendly-words';
+import { friendlyWords } from 'friendlier-words';
 
 // Default (2 segments, '-')
 const words = friendlyWords();

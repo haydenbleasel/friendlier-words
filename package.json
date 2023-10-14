@@ -1,5 +1,5 @@
 {
-  "name": "@beskar-labs/friendly-words",
+  "name": "friendlier-words",
   "version": "1.0.1",
   "description": "A list of friendly words to use in your app.",
   "files": [
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beskar-co/friendly-words.git"
+    "url": "git+https://github.com/haydenbleasel/friendlier-words.git"
   },
   "keywords": [
     "friendly",
@@ -30,9 +30,9 @@
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/beskar-co/friendly-words/issues"
+    "url": "https://github.com/haydenbleasel/friendlier-words/issues"
   },
-  "homepage": "https://github.com/beskar-co/friendly-words#readme",
+  "homepage": "https://github.com/haydenbleasel/friendlier-words#readme",
   "devDependencies": {
     "@beskar-labs/harmony": "^2.1.1",
     "eslint": "^8.37.0",
