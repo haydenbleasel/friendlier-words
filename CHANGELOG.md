@@ -1,3 +1,23 @@
+# v1.0.2 (Sat Oct 14 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update Harmony ([@haydenbleasel](https://github.com/haydenbleasel))
+- Switch from Yarn to pnpm ([@haydenbleasel](https://github.com/haydenbleasel))
+- Rename package ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### 🔩 Dependency Updates
+
+- Bump semver from 6.3.0 to 6.3.1 [#2](https://github.com/haydenbleasel/friendlier-words/pull/2) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump stylelint from 15.9.0 to 15.10.1 [#1](https://github.com/haydenbleasel/friendlier-words/pull/1) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 2
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.1 (Mon Jul 03 2023)
 
 #### ⚠️ Pushed to `main`
