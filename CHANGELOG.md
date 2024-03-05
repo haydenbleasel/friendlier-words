@@ -1,3 +1,16 @@
+# v1.0.4 (Tue Mar 05 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Update space.json ([@haydenbleasel](https://github.com/haydenbleasel))
+- Curation ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.3 (Fri Jan 19 2024)
 
 #### ⚠️ Pushed to `main`
