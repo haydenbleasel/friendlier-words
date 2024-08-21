@@ -2,10 +2,21 @@
   "name": "friendlier-words",
   "version": "1.0.4",
   "description": "A list of friendly words to use in your app.",
-  "files": [
-    "dist"
-  ],
-  "main": "dist/index.js",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public",
@@ -21,12 +32,7 @@
     "type": "git",
     "url": "git+https://github.com/haydenbleasel/friendlier-words.git"
   },
-  "keywords": [
-    "friendly",
-    "words",
-    "name",
-    "generate"
-  ],
+  "keywords": ["friendly", "words", "name", "generate"],
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
   "license": "ISC",
   "bugs": {
