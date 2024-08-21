@@ -1,3 +1,15 @@
+# v1.0.8 (Wed Aug 21 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Add License and Security ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.7 (Wed Aug 21 2024)
 
 #### ⚠️ Pushed to `main`
