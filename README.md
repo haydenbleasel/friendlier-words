@@ -1,6 +1,11 @@
 # friendlier-words
 
-[![Version](https://img.shields.io/npm/v/friendlier-words.svg)](https://www.npmjs.org/package/friendlier-words) [![Build Status](https://github.com/haydenbleasel/friendlier-words/actions/workflows/push.yml/badge.svg?branch=main)](https://github.com/haydenbleasel/friendlier-words/actions?query=branch%3Amain)
+<div>
+  <img src="https://img.shields.io/github/actions/workflow/status/haydenbleasel/friendlier-words/push.yaml" alt="" />
+  <img src="https://img.shields.io/npm/dy/friendlier-words" alt="" />
+  <img src="https://img.shields.io/npm/v/friendlier-words" alt="" />
+  <img src="https://img.shields.io/github/license/haydenbleasel/friendlier-words" alt="" />
+</div>
 
 ![friendlier-words](/sample.png)
 
