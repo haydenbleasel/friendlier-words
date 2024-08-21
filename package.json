@@ -24,8 +24,8 @@
   },
   "scripts": {
     "prepublishOnly": "pnpm build",
-    "build": "tsup src",
-    "dev": "tsup src --watch",
+    "build": "tsup",
+    "dev": "tsup --watch",
     "test": "node test/test.js"
   },
   "repository": {
