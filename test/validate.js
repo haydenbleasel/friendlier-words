@@ -21,6 +21,12 @@ function validateAndRemoveDuplicates() {
       }
 
       content = content.filter((word) => {
+        // Remove hyphenated words
+        if (word.includes('-')) {
+          duplicates.push({ word, file1: file, file2: 'Hyphenated' });
+          return false;
+        }
+
         // Check for exact duplicates
         if (wordMap.has(word)) {
           duplicates.push({ word, file1: wordMap.get(word), file2: file });
@@ -55,11 +61,17 @@ function validateAndRemoveDuplicates() {
 
   // Report results
   if (duplicates.length === 0) {
-    console.log('No duplicate or related words found across all JSON files.');
+    console.log(
+      'No duplicate, related, or hyphenated words found across all JSON files.'
+    );
   } else {
-    console.log('Duplicate or related words found and removed:');
+    console.log('Duplicate, related, or hyphenated words found and removed:');
     for (const { word, file1, file2 } of duplicates) {
-      console.log(`- "${word}" removed from ${file2} (kept in ${file1})`);
+      if (file2 === 'Hyphenated') {
+        console.log(`- "${word}" removed from ${file1} (hyphenated word)`);
+      } else {
+        console.log(`- "${word}" removed from ${file2} (kept in ${file1})`);
+      }
     }
   }
 }
