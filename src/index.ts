@@ -1,10 +1,11 @@
+import adjectives from '../lib/adjectives.json' assert { type: 'json' };
 import animals from '../lib/animals.json' assert { type: 'json' };
-import space from '../lib/space.json' assert { type: 'json' };
 import food from '../lib/food.json' assert { type: 'json' };
 import mythology from '../lib/mythology.json' assert { type: 'json' };
-import adjectives from '../lib/adjectives.json' assert { type: 'json' };
+import nature from '../lib/nature.json' assert { type: 'json' };
+import space from '../lib/space.json' assert { type: 'json' };
 
-const categories = [animals, space, food, mythology];
+const categories = [animals, space, food, mythology, nature];
 
 export const friendlyWords = (segments = 2, separator = '-'): string => {
   const words: string[] = [];
