@@ -1,19 +1,23 @@
 const friendlyWords = require('../dist/index.js').friendlyWords;
 
-console.log('Default\n\n');
+const iterations = 5000;
+const testCases = [
+  { name: '2 words', args: [2] },
+  { name: '3 words', args: [3] },
+  { name: '4 words', args: [4] },
+  { name: '5 words', args: [5] },
+  { name: 'Custom separator', args: [3, '+'] },
+];
 
-for (let i = 0; i < 10; i++) {
-  console.log(friendlyWords());
-}
+const results = testCases.map(({ name, args }) => {
+  const start = performance.now();
+  for (let i = 0; i < iterations; i++) {
+    friendlyWords(...args);
+  }
+  const end = performance.now();
+  const duration = end - start;
+  return { name, duration: duration.toFixed(2) };
+});
 
-console.log('\n\n3 Segments\n\n');
-
-for (let i = 0; i < 10; i++) {
-  console.log(friendlyWords(3));
-}
-
-console.log('\n\nCustom separator\n\n');
-
-for (let i = 0; i < 10; i++) {
-  console.log(friendlyWords(2, '/'));
-}
+// biome-ignore lint/nursery/noConsole: "Performance test results"
+console.table(results);
