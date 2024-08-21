@@ -1,13 +1,28 @@
 const { friendlyWords } = require('../dist/index.js');
 const adjectives = require('../lib/adjectives.json');
 const animals = require('../lib/animals.json');
+const architecture = require('../lib/architecture.json');
+const art = require('../lib/art.json');
+const fashion = require('../lib/fashion.json');
 const food = require('../lib/food.json');
+const history = require('../lib/history.json');
 const music = require('../lib/music.json');
 const mythology = require('../lib/mythology.json');
 const nature = require('../lib/nature.json');
 const space = require('../lib/space.json');
 
-const categories = [animals, space, food, mythology, nature, music];
+const categories = [
+  animals,
+  space,
+  food,
+  mythology,
+  nature,
+  music,
+  architecture,
+  art,
+  fashion,
+  history,
+];
 
 function calculatePermutations(segments) {
   if (segments < 2) {
