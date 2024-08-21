@@ -52,5 +52,13 @@
     "tsup": "^6.7.0",
     "typescript": "^5.0.3",
     "ultracite": "4.0.6"
+  },
+  "auto": {
+    "plugins": [
+      "npm",
+      "all-contributors",
+      "first-time-contributor",
+      "released"
+    ]
   }
 }
