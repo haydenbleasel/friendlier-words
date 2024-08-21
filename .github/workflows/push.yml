@@ -1,57 +1,44 @@
-# Name of our action
 name: Release
 
-# The event that will trigger the action
 on:
   push:
     branches: [main]
 
-# what the action will do
 jobs:
   release:
-    # The operating system it will run on
     runs-on: ubuntu-latest
-    # This check needs to be in place to prevent a publish loop with auto and github actions
+    
     if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
-    # The list of steps that the action will go through
+    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      
+      - uses: actions/checkout@v4
       
       - name: Prepare repository
         run: git fetch --unshallow --tags
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+      
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
-
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
+          node-version: 20
+      
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
-          run_install: false
-
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
+          version: 9
+      
+      - name: Cache pnpm modules
+        uses: actions/cache@v4
         with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
-        run: pnpm install
-
+            ${{ runner.os }}-pnpm-
+      
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          pnpm install --frozen-lockfile
+          pnpm install
           npx auto shipit
