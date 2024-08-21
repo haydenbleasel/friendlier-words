@@ -1,5 +1,9 @@
 # friendlier-words
 
+[![Version](https://img.shields.io/npm/v/friendlier-words.svg)](https://www.npmjs.org/package/friendlier-words) [![Build Status](https://github.com/haydenbleasel/friendlier-words/actions/workflows/push.yml/badge.svg?branch=main)](https://github.com/haydenbleasel/friendlier-words/actions?query=branch%3Amain)
+
+![friendlier-words](/sample.png)
+
 `friendlier-words` is a JavaScript package that creates friendly words to use in your app, e.g. in project names. It's based off the library by [Glitch](https://github.com/glitchdotcom/friendly-words), but with some choice improvements:
 
 - Curated the word lists to remove strange word combinations
