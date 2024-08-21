@@ -1,3 +1,28 @@
+# v1.0.5 (Wed Aug 21 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Update push.yml ([@haydenbleasel](https://github.com/haydenbleasel))
+- Update README.md ([@haydenbleasel](https://github.com/haydenbleasel))
+- Create a script that calculates permutations ([@haydenbleasel](https://github.com/haydenbleasel))
+- Misc cleanup ([@haydenbleasel](https://github.com/haydenbleasel))
+- Make available in CJS and ESM ([@haydenbleasel](https://github.com/haydenbleasel))
+- Improve the test case to log performance ([@haydenbleasel](https://github.com/haydenbleasel))
+- More specific removals ([@haydenbleasel](https://github.com/haydenbleasel))
+- Remove duplicates ([@haydenbleasel](https://github.com/haydenbleasel))
+- Add music category ([@haydenbleasel](https://github.com/haydenbleasel))
+- Remove duplicate words ([@haydenbleasel](https://github.com/haydenbleasel))
+- Update validate.js ([@haydenbleasel](https://github.com/haydenbleasel))
+- Create validate.js ([@haydenbleasel](https://github.com/haydenbleasel))
+- Add new nature category ([@haydenbleasel](https://github.com/haydenbleasel))
+- Replace eslint-config-harmony with Ultracite ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.4 (Tue Mar 05 2024)
 
 #### ⚠️ Pushed to `main`
