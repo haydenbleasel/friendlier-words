@@ -1,3 +1,15 @@
+# v1.1.0 (Wed Aug 21 2024)
+
+#### 🚀 Enhancement
+
+- V1.1 [#4](https://github.com/haydenbleasel/friendlier-words/pull/4) ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.8 (Wed Aug 21 2024)
 
 #### ⚠️ Pushed to `main`
