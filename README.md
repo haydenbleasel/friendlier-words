@@ -17,11 +17,10 @@
 - Allow for a custom separator
 
 Possible permutations:
-- 2 words: 246,012
-- 3 words: 265,446,948
-- 4 words: 286,417,256,892
-- 5 words: 309,044,220,186,468
-- 6 words: heat death of the universe?
+- 2 words: 401,736
+- 3 words: 707,858,832
+- 4 words: 1,247,247,261,984
+- 5 words: heat death of the universe
 
 ## Installation
 
