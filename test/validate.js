@@ -12,7 +12,13 @@ function validateAndRemoveDuplicates() {
   for (const file of fs.readdirSync(libDir)) {
     if (path.extname(file) === '.json') {
       const filePath = path.join(libDir, file);
-      let content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+      let content;
+      try {
+        content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+      } catch (error) {
+        console.error(`Error parsing JSON in file ${file}: ${error.message}`);
+        continue; // Skip this file and move to the next one
+      }
 
       content = content.filter((word) => {
         // Check for exact duplicates
