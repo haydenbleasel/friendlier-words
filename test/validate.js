@@ -21,6 +21,12 @@ function validateAndRemoveDuplicates() {
       }
 
       content = content.filter((word) => {
+        // Remove words containing spaces
+        if (word.includes(' ')) {
+          duplicates.push({ word, file1: file, file2: 'Contains space' });
+          return false;
+        }
+
         // Remove hyphenated words
         if (word.includes('-')) {
           duplicates.push({ word, file1: file, file2: 'Hyphenated' });
@@ -45,6 +51,28 @@ function validateAndRemoveDuplicates() {
           return false; // Remove the related word
         }
 
+        // Check for plurals
+        const singularWord = word.replace(/e?s$/, '');
+        if (wordMap.has(singularWord)) {
+          duplicates.push({
+            word,
+            file1: wordMap.get(singularWord),
+            file2: file,
+          });
+          return false; // Remove the plural
+        }
+
+        // Check for words ending in 'y' (e.g., "trend" and "trendy")
+        const baseWordY = word.replace(/y$/, '');
+        if (wordMap.has(baseWordY)) {
+          duplicates.push({
+            word,
+            file1: wordMap.get(baseWordY),
+            file2: file,
+          });
+          return false; // Remove the word ending in 'y'
+        }
+
         wordMap.set(word, file);
         if (word.endsWith('ing')) {
           relatedWords.set(baseWord, word);
@@ -62,13 +90,25 @@ function validateAndRemoveDuplicates() {
   // Report results
   if (duplicates.length === 0) {
     console.log(
-      'No duplicate, related, or hyphenated words found across all JSON files.'
+      'No duplicate, related, hyphenated, space-containing, plural, or y-ending words found across all JSON files.'
     );
   } else {
-    console.log('Duplicate, related, or hyphenated words found and removed:');
+    console.log(
+      'Duplicate, related, hyphenated, space-containing, plural, or y-ending words found and removed:'
+    );
     for (const { word, file1, file2 } of duplicates) {
       if (file2 === 'Hyphenated') {
         console.log(`- "${word}" removed from ${file1} (hyphenated word)`);
+      } else if (file2 === 'Contains space') {
+        console.log(`- "${word}" removed from ${file1} (contains space)`);
+      } else if (word.match(/e?s$/)) {
+        console.log(
+          `- "${word}" removed from ${file2} (plural of word in ${file1})`
+        );
+      } else if (word.match(/y$/)) {
+        console.log(
+          `- "${word}" removed from ${file2} (y-ending variant of word in ${file1})`
+        );
       } else {
         console.log(`- "${word}" removed from ${file2} (kept in ${file1})`);
       }
