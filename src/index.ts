@@ -4,6 +4,7 @@ import architecture from '../lib/architecture.json' assert { type: 'json' };
 import art from '../lib/art.json' assert { type: 'json' };
 import fashion from '../lib/fashion.json' assert { type: 'json' };
 import food from '../lib/food.json' assert { type: 'json' };
+import history from '../lib/history.json' assert { type: 'json' };
 import music from '../lib/music.json' assert { type: 'json' };
 import mythology from '../lib/mythology.json' assert { type: 'json' };
 import nature from '../lib/nature.json' assert { type: 'json' };
@@ -19,6 +20,7 @@ const categories = [
   architecture,
   art,
   fashion,
+  history,
 ];
 
 export const friendlyWords = (segments = 2, separator = '-'): string => {
