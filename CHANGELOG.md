@@ -1,3 +1,15 @@
+# v1.1.2 (Fri Oct 18 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Bump deps ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.1.1 (Thu Aug 22 2024)
 
 #### ⚠️ Pushed to `main`
