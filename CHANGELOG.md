@@ -1,3 +1,21 @@
+# v1.1.3 (Mon Dec 02 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Update push.yml ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### 🔩 Dependency Updates
+
+- Bump cross-spawn from 7.0.3 to 7.0.6 in the npm_and_yarn group across 1 directory [#6](https://github.com/haydenbleasel/friendlier-words/pull/6) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump the npm_and_yarn group across 1 directory with 2 updates [#5](https://github.com/haydenbleasel/friendlier-words/pull/5) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 2
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.1.2 (Fri Oct 18 2024)
 
 #### ⚠️ Pushed to `main`
