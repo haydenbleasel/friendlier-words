@@ -1,29 +1,21 @@
-/* eslint-disable eslint-plugin-jest/require-hook */
-import adjectives from "../lib/adjectives.json";
-import animals from "../lib/animals.json";
-import architecture from "../lib/architecture.json";
-import art from "../lib/art.json";
-import fashion from "../lib/fashion.json";
-import food from "../lib/food.json";
-import history from "../lib/history.json";
-import music from "../lib/music.json";
-import mythology from "../lib/mythology.json";
-import nature from "../lib/nature.json";
-import space from "../lib/space.json";
+import { readdirSync } from "node:fs";
+import { join } from "node:path";
 import { friendlyWords } from "../src";
 
-const categories = [
-  animals,
-  space,
-  food,
-  mythology,
-  nature,
-  music,
-  architecture,
-  art,
-  fashion,
-  history,
-];
+const libDir = join(import.meta.dirname, "../lib");
+const files = readdirSync(libDir).filter((f) => f.endsWith(".json"));
+
+const allWords: Record<string, string[]> = {};
+for (const file of files) {
+  const name = file.replace(".json", "");
+  const module = await import(join(libDir, file));
+  allWords[name] = module.default;
+}
+
+const adjectives = allWords.adjectives;
+const categories = Object.entries(allWords)
+  .filter(([name]) => name !== "adjectives")
+  .map(([, words]) => words);
 
 const calculatePermutations = (segments: number): number => {
   if (segments < 2) {
