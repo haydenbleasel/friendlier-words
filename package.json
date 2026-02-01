@@ -41,7 +41,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "prepublishOnly": "pnpm build",
+    "prepublishOnly": "bun run build",
     "build": "tsup",
     "dev": "tsup --watch",
     "test": "bun test",
