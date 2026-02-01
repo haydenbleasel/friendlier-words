@@ -1,5 +1,16 @@
 # v1.1.3 (Mon Dec 02 2024)
 
+## 1.2.0
+
+### Minor Changes
+
+- 6f66373: Add new color prefixes
+- 2c0aae8: Add more categories
+
+### Patch Changes
+
+- 531910d: Curate words
+
 ## 1.1.4
 
 ### Patch Changes
