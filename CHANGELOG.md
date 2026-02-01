@@ -1,5 +1,14 @@
 # v1.1.3 (Mon Dec 02 2024)
 
+## 1.1.4
+
+### Patch Changes
+
+- 60dea09: Rework permutations / validate scripts to TS
+- 60dea09: Add unit tests
+- 60dea09: Migrate linter/formatter to oxc
+- 60dea09: Migrate to bun
+
 #### ⚠️ Pushed to `main`
 
 - Update push.yml ([@haydenbleasel](https://github.com/haydenbleasel))
