@@ -1,7 +1,6 @@
 # friendlier-words
 
 <div>
-  <img src="https://img.shields.io/github/actions/workflow/status/haydenbleasel/friendlier-words/push.yaml" alt="" />
   <img src="https://img.shields.io/npm/dy/friendlier-words" alt="" />
   <img src="https://img.shields.io/npm/v/friendlier-words" alt="" />
   <img src="https://img.shields.io/github/license/haydenbleasel/friendlier-words" alt="" />
