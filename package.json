@@ -46,7 +46,9 @@
     "dev": "tsup --watch",
     "test": "bun test",
     "check": "ultracite check",
-    "fix": "ultracite fix"
+    "fix": "ultracite fix",
+    "permutations": "bun scripts/permutations.ts",
+    "validate": "bun scripts/validate.ts"
   },
   "devDependencies": {
     "oxfmt": "^0.27.0",

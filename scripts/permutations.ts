@@ -1,0 +1,66 @@
+/* eslint-disable eslint-plugin-jest/require-hook */
+import adjectives from "../lib/adjectives.json";
+import animals from "../lib/animals.json";
+import architecture from "../lib/architecture.json";
+import art from "../lib/art.json";
+import fashion from "../lib/fashion.json";
+import food from "../lib/food.json";
+import history from "../lib/history.json";
+import music from "../lib/music.json";
+import mythology from "../lib/mythology.json";
+import nature from "../lib/nature.json";
+import space from "../lib/space.json";
+import { friendlyWords } from "../src";
+
+const categories = [
+  animals,
+  space,
+  food,
+  mythology,
+  nature,
+  music,
+  architecture,
+  art,
+  fashion,
+  history,
+];
+
+const calculatePermutations = (segments: number): number => {
+  if (segments < 2) {
+    throw new Error("Need at least 2 words");
+  }
+
+  // Start with the number of adjectives
+  let totalPermutations = adjectives.length;
+
+  // Multiply by the total number of words in all other categories for each additional segment
+  const totalWordsInCategories = categories.reduce(
+    (sum, category) => sum + category.length,
+    0
+  );
+  for (let i = 1; i < segments; i += 1) {
+    totalPermutations *= totalWordsInCategories;
+  }
+
+  return totalPermutations;
+};
+
+// Calculate permutations for different numbers of segments
+console.log("Possible permutations:");
+for (let i = 2; i <= 5; i += 1) {
+  console.log(`${i} words: ${calculatePermutations(i).toLocaleString()}`);
+}
+
+// Generate a sample of unique words
+const uniqueWords = new Set<string>();
+const sampleSize = 1000;
+const maxAttempts = sampleSize * 10;
+
+for (let i = 0; i < maxAttempts && uniqueWords.size < sampleSize; i += 1) {
+  // Generate 5-word combinations
+  uniqueWords.add(friendlyWords(5));
+}
+
+console.log(`\nUnique ${5}-word combinations generated: ${uniqueWords.size}`);
+console.log("Sample of generated words:");
+console.log([...uniqueWords].slice(0, 10).join("\n"));
