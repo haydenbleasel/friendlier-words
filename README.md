@@ -17,6 +17,7 @@
 - Allow for a custom separator
 
 Possible permutations:
+
 - 2 words: 401,736
 - 3 words: 707,858,832
 - 4 words: 1,247,247,261,984
@@ -31,11 +32,11 @@ pnpm add friendlier-words
 ## Usage
 
 ```ts
-import { friendlyWords } from 'friendlier-words';
+import { friendlyWords } from "friendlier-words";
 
 // Default (2 segments, '-')
 const words = friendlyWords();
 
 // Custom (3 segments, '_')
-const words = friendlyWords(3, '_');
+const words = friendlyWords(3, "_");
 ```
