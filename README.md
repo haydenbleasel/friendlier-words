@@ -17,10 +17,10 @@
 
 Possible permutations:
 
-- 2 words: 401,736
-- 3 words: 707,858,832
-- 4 words: 1,247,247,261,984
-- 5 words: heat death of the universe
+- 2 words: 700,295
+- 3 words: 2,160,410,075
+- 4 words: 6,664,865,081,375
+- 5 words: 20,561,108,776,041,876
 
 ## Installation
 
