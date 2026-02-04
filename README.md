@@ -1,24 +1,6 @@
 # joyful
 
-<div>
-  <img src="https://img.shields.io/npm/dy/joyful" alt="" />
-  <img src="https://img.shields.io/npm/v/joyful" alt="" />
-  <img src="https://img.shields.io/github/license/haydenbleasel/joyful" alt="" />
-</div>
-
-`joyful` is a JavaScript package that creates friendly words to use in your app, e.g. in project names. It's based off the library by [Glitch](https://github.com/glitchdotcom/friendly-words), but with some choice improvements:
-
-- Curated the word lists to remove strange word combinations
-- Generated categories of words rather than objects, allowing for more flexibility
-- Allow for a custom number of segments
-- Allow for a custom separator
-
-Possible permutations:
-
-- 2 words: 700,295
-- 3 words: 2,160,410,075
-- 4 words: 6,664,865,081,375
-- 5 words: 20,561,108,776,041,876
+Generate delightful, random word combinations for your app — perfect for project names, usernames, or unique identifiers.
 
 ## Installation
 
@@ -31,9 +13,41 @@ pnpm add joyful
 ```ts
 import { joyful } from "joyful";
 
-// Default (2 segments, '-')
-const words = joyful();
-
-// Custom (3 segments, '_')
-const words = joyful(3, "_");
+joyful();        // "amber-fox"
+joyful(3);       // "golden-marble-cathedral"
+joyful(3, "_");  // "swift_northern_lights"
 ```
+
+## API
+
+### `joyful(segments?, separator?)`
+
+| Parameter   | Type     | Default | Description                    |
+| ----------- | -------- | ------- | ------------------------------ |
+| `segments`  | `number` | `2`     | Number of words to generate    |
+| `separator` | `string` | `"-"`   | Character(s) between words     |
+
+Returns a `string` of random words joined by the separator.
+
+## Word Categories
+
+The first word is always a prefix (adjective or color). Subsequent words are drawn from:
+
+animals, architecture, art, emotions, fashion, food, history, literature, music, mythology, nature, professions, science, space, sports, transportation
+
+## Permutations
+
+| Segments | Combinations             |
+| -------- | ------------------------ |
+| 2        | 700,295                  |
+| 3        | 2,160,410,075            |
+| 4        | 6,664,865,081,375        |
+| 5        | 20,561,108,776,041,876   |
+
+## Credits
+
+Based on [friendly-words](https://github.com/glitchdotcom/friendly-words) by Glitch, with curated word lists and additional categories.
+
+## License
+
+ISC
