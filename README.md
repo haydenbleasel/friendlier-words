@@ -6,8 +6,6 @@
   <img src="https://img.shields.io/github/license/haydenbleasel/joyful" alt="" />
 </div>
 
-![joyful](/sample.png)
-
 `joyful` is a JavaScript package that creates friendly words to use in your app, e.g. in project names. It's based off the library by [Glitch](https://github.com/glitchdotcom/friendly-words), but with some choice improvements:
 
 - Curated the word lists to remove strange word combinations
