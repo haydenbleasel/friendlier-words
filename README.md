@@ -1,14 +1,14 @@
-# friendlier-words
+# joyful
 
 <div>
-  <img src="https://img.shields.io/npm/dy/friendlier-words" alt="" />
-  <img src="https://img.shields.io/npm/v/friendlier-words" alt="" />
-  <img src="https://img.shields.io/github/license/haydenbleasel/friendlier-words" alt="" />
+  <img src="https://img.shields.io/npm/dy/joyful" alt="" />
+  <img src="https://img.shields.io/npm/v/joyful" alt="" />
+  <img src="https://img.shields.io/github/license/haydenbleasel/joyful" alt="" />
 </div>
 
-![friendlier-words](/sample.png)
+![joyful](/sample.png)
 
-`friendlier-words` is a JavaScript package that creates friendly words to use in your app, e.g. in project names. It's based off the library by [Glitch](https://github.com/glitchdotcom/friendly-words), but with some choice improvements:
+`joyful` is a JavaScript package that creates friendly words to use in your app, e.g. in project names. It's based off the library by [Glitch](https://github.com/glitchdotcom/friendly-words), but with some choice improvements:
 
 - Curated the word lists to remove strange word combinations
 - Generated categories of words rather than objects, allowing for more flexibility
@@ -25,17 +25,17 @@ Possible permutations:
 ## Installation
 
 ```bash
-pnpm add friendlier-words
+pnpm add joyful
 ```
 
 ## Usage
 
 ```ts
-import { friendlyWords } from "friendlier-words";
+import { joyful } from "joyful";
 
 // Default (2 segments, '-')
-const words = friendlyWords();
+const words = joyful();
 
 // Custom (3 segments, '_')
-const words = friendlyWords(3, "_");
+const words = joyful(3, "_");
 ```

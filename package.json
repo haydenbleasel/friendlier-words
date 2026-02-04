@@ -1,6 +1,6 @@
 {
-  "name": "friendlier-words",
-  "version": "1.2.0",
+  "name": "joyful",
+  "version": "0.0.0",
   "description": "A list of friendly words to use in your app.",
   "keywords": [
     "friendly",
@@ -8,15 +8,15 @@
     "name",
     "words"
   ],
-  "homepage": "https://github.com/haydenbleasel/friendlier-words#readme",
+  "homepage": "https://github.com/haydenbleasel/joyful#readme",
   "bugs": {
-    "url": "https://github.com/haydenbleasel/friendlier-words/issues"
+    "url": "https://github.com/haydenbleasel/joyful/issues"
   },
   "license": "ISC",
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haydenbleasel/friendlier-words.git"
+    "url": "git+https://github.com/haydenbleasel/joyful.git"
   },
   "files": [
     "dist"

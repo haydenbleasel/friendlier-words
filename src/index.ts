@@ -57,7 +57,7 @@ const getUniqueWord = (words: string[]): string => {
   return words.includes(word) ? getUniqueWord(words) : word;
 };
 
-export const friendlyWords = (segments = 2, separator = "-"): string => {
+export const joyful = (segments = 2, separator = "-"): string => {
   validateInput(segments, separator);
 
   const words: string[] = [getRandomElement(prefixes)];
